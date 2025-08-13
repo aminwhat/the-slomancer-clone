@@ -13,8 +13,37 @@ config_version=5
 config/name="the-slomancer-clone"
 run/main_scene="uid://dddmnrgvi8jab"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+
+[aseprite]
+
+wizard/aseprite_executable_path="/Applications/Aseprite.app"
+wizard/canvas_textures/default_texture_filter=0
+wizard/stretch/mode="canvas_items"
+wizard/size/window_height_override=720
+wizard/size/window_width_override=1280
+wizard/size/viewport_height=180
+wizard/size/viewport_width=360
+
+[aseprite_importers]
+
+aseprite_executable_path="/Applications/Aseprite.app"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
 project/assembly_name="the-slomancer-clone"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/nklbdev.aseprite_importers/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cl6mkl2bc6x2r"
+path="res://.godot/imported/back.ase-77b1900fbf5da98a093007cce7140a31.res"
+
+[deps]
+
+source_file="res://Assets/swordsman/idle/back.ase"
+dest_files=["res://.godot/imported/back.ase-77b1900fbf5da98a093007cce7140a31.res"]
+
+[params]
+
