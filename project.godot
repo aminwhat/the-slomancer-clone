@@ -12,7 +12,7 @@ config_version=5
 
 config/name="the-slomancer-clone"
 run/main_scene="uid://dddmnrgvi8jab"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 
 [aseprite]
 
@@ -42,7 +42,7 @@ project/assembly_name="the-slomancer-clone"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/nklbdev.aseprite_importers/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/gdterm/plugin.cfg")
 
 [rendering]
 
