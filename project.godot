@@ -42,8 +42,14 @@ project/assembly_name="the_slomancer_clone"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/gdterm/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/gdterm/plugin.cfg", "res://addons/rust_auto_compile/plugin.cfg")
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
+
+[rust]
+
+manifest_path="./Cargo.toml"
+cargo_path="/Users/aminwhat/.cargo/bin/cargo"
