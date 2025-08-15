@@ -14,3 +14,5 @@ texture = ExtResource("1_pyidc")
 [node name="Back" type="Sprite2D" parent="."]
 position = Vector2(252, 55)
 texture = ExtResource("2_vvh5c")
+
+[node name="Player" type="Player" parent="."]

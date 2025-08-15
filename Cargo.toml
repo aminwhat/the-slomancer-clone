@@ -1,0 +1,10 @@
+[package]
+name = "the_slomancer_clone"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+godot = "0.3.4"
+
+[lib]
+crate-type = ["cdylib"] # Compile this crate to a dynamic C library.

@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "the-slomancer-clone", "the-slomancer-clone.csproj", "{AED856DB-6C48-488C-B4D3-A843FD54F35D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "the_slomancer_clone", "the_slomancer_clone.csproj", "{AED856DB-6C48-488C-B4D3-A843FD54F35D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

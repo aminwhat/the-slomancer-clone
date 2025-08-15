@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://target/debug/libthe_slomancer_clone.so"
+linux.release.x86_64 =   "res://target/release/libthe_slomancer_clone.so"
+windows.debug.x86_64 =   "res://target/debug/the_slomancer_clone.dll"
+windows.release.x86_64 = "res://target/release/the_slomancer_clone.dll"
+macos.debug =            "res://target/debug/libthe_slomancer_clone.dylib"
+macos.release =          "res://target/release/libthe_slomancer_clone.dylib"
+macos.debug.arm64 =      "res://target/debug/libthe_slomancer_clone.dylib"
+macos.release.arm64 =    "res://target/release/libthe_slomancer_clone.dylib"
