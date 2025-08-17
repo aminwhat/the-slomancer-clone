@@ -1,0 +1,22 @@
+[package]
+name = "core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+proc_macros = { path = "./proc_macros" }
+anyhow = "1"
+bevy = { version = "0.16", default-features = false, features = [
+    "bevy_asset",
+    "bevy_log",
+] }
+godot = "0.3.4"
+lazy_static = "1.5.0"
+send_wrapper = "0.6"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[features]
+# serde = ["godot/serde"]
+assets = [] # experimental feature, see assets::GodotResourceLoader
