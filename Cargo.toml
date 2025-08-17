@@ -3,8 +3,19 @@ name = "the_slomancer_clone"
 version = "0.1.0"
 edition = "2024"
 
+
+[[bin]]
+path = "./run_godot.rs"
+name = "the_slomancer_clone"
+
 [dependencies]
 godot = "0.3.4"
+core = { path = "./core" }
+bevy = { version = "0.16", default-features = false, features = [
+    "bevy_asset",
+    "bevy_state",
+] }
+dotenvy = "0.15.7"
 
 [lib]
 crate-type = ["cdylib"] # Compile this crate to a dynamic C library.
