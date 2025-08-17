@@ -28,6 +28,10 @@ wizard/size/viewport_width=360
 
 aseprite_executable_path="/Applications/Aseprite.app"
 
+[autoload]
+
+BevyAppSingleton="*res://Scenes/bevy_app_singleton.tscn"
+
 [display]
 
 window/size/viewport_width=360
