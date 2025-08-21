@@ -17,3 +17,4 @@ position = Vector2(252, 55)
 texture = ExtResource("3_kry3j")
 
 [node name="Node2D" parent="." instance=ExtResource("4_jjvhh")]
+visible = false

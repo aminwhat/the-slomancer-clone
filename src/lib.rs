@@ -1,5 +1,5 @@
 use bevy::{
-    app::{App, Startup, Update},
+    app::{App, Update},
     ecs::{schedule::IntoScheduleConfigs, system::Res},
     prelude::{AppExtStates, Commands, OnEnter, Query, Resource, States, in_state},
     state::app::StatesPlugin,
@@ -8,7 +8,7 @@ use core::prelude::{
     AsPhysicsSystem, ErasedGd, ErasedGdResource, GodotScene, SystemDeltaTimer, bevy_app,
 };
 use godot::{
-    builtin::Vector2,
+    builtin::{Transform2D, Vector2},
     classes::{ResourceLoader, Sprite2D},
 };
 use godot::{init::ExtensionLibrary, prelude::gdextension};
@@ -24,7 +24,6 @@ fn build_app(app: &mut App) {
     app.add_plugins(StatesPlugin)
         .init_state::<GameState>()
         .init_resource::<MyAssets>()
-        .add_systems(Startup, startup)
         .add_systems(OnEnter(GameState::Playing), spawn_sprite)
         .add_systems(
             Update,
@@ -32,10 +31,6 @@ fn build_app(app: &mut App) {
                 .as_physics_system()
                 .run_if(in_state(GameState::Playing)),
         );
-}
-
-fn startup() {
-    println!("Starting Bevy...")
 }
 
 #[derive(Resource, Debug)]
@@ -55,7 +50,13 @@ impl Default for MyAssets {
 fn spawn_sprite(mut commands: Commands, assets: Res<MyAssets>) {
     commands.spawn(
         GodotScene::from_resource(assets.sprite.clone())
-            .with_translation2d(Vector2 { x: 200.0, y: 200.0 }),
+            .with_translation2d(Vector2 { x: 100.0, y: 100.0 })
+            .with_transform2d(
+                Transform2D::from(
+                    GodotScene::from_resource(assets.sprite.clone()).get_transform2d(),
+                )
+                .scaled(Vector2 { x: 0.1, y: 0.1 }),
+            ),
     );
 }
 

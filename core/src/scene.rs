@@ -96,6 +96,34 @@ impl GodotScene {
         ));
         self
     }
+
+    pub fn get_translation2d(&self) -> Vector2 {
+        match &self.transform {
+            Some(GodotSceneTransform::Transform2D(t)) => t.origin,
+            _ => Vector2::ZERO,
+        }
+    }
+
+    pub fn get_translation3d(&self) -> Vector3 {
+        match &self.transform {
+            Some(GodotSceneTransform::Transform3D(t)) => t.origin,
+            _ => Vector3::ZERO,
+        }
+    }
+
+    pub fn get_transform2d(&self) -> Transform2D {
+        match &self.transform {
+            Some(GodotSceneTransform::Transform2D(t)) => *t,
+            _ => Transform2D::IDENTITY,
+        }
+    }
+
+    pub fn get_transform3d(&self) -> Transform3D {
+        match &self.transform {
+            Some(GodotSceneTransform::Transform3D(t)) => *t,
+            _ => Transform3D::IDENTITY,
+        }
+    }
 }
 
 #[derive(Component, Debug, Default)]
